@@ -35,16 +35,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/womanListView"
-        android:layout_below="@+id/womanImageButton"
-        android:layout_alignRight="@+id/womanImageButton"
-        android:layout_alignEnd="@+id/womanImageButton" />
+        android:layout_alignLeft="@+id/womanImageButton"
+        android:layout_alignStart="@+id/womanImageButton"
+        android:layout_marginLeft="80dp"
+        android:layout_below="@+id/manImageButton"
+        android:layout_marginBottom="170dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:footerDividersEnabled="false"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="90dp" />
 
-    <ListView
+    <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/manListView"
-        android:layout_alignTop="@+id/womanListView"
-        android:layout_alignLeft="@+id/manImageButton"
-        android:layout_alignStart="@+id/manImageButton" />
+        android:text="turn on sale"
+        android:id="@+id/saleSwitch"
+        android:layout_marginBottom="108dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:checked="false" />
 
 </RelativeLayout>

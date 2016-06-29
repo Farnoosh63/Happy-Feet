@@ -18,7 +18,6 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     @Bind(R.id.womanListView) ListView mWomanListView;
 
     @Bind(R.id.manImageButton) ImageButton mManImageButton;
-    @Bind(R.id.manListView) ListView mManListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +37,9 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, category);
             mWomanListView.setAdapter(adapter);
         }else if(v == mManImageButton) {
-            String[] category = {"shoes", "bags", "suits", "clearance"};
+            String[] category = {"bags", "suits", "shoes", "clearance"};
             ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, category);
-            mManListView.setAdapter(adapter);
+            mWomanListView.setAdapter(adapter);
         }
 
     }
