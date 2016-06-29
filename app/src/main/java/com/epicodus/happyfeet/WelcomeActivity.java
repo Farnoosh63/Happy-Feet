@@ -1,6 +1,7 @@
 package com.epicodus.happyfeet;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,8 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.util.Random;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -34,7 +37,8 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         mWomanImageButton.setOnClickListener(this);
         mManImageButton.setOnClickListener(this);
 
-
+        Typeface captureFont = Typeface.createFromAsset(getAssets(), "fonts/Capture_it_2.ttf");
+        mSaleResult.setTypeface(captureFont);
 
         //set the switch to ON
         mSaleSwitch.setChecked(true);
@@ -45,14 +49,14 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
-                    mSaleResult.setText("Switch is currently ON");
+                    Random random = new Random();
+                    int randomNum = random.nextInt(80);
+                    mSaleResult.setText("The sale is " + randomNum + "%");
                 } else {
-                    mSaleResult.setText("Switch is currently OFF");
+                    mSaleResult.setText("Turn on to see special deal!");
                 }
             }
         });
-
-
     }
 
     @Override

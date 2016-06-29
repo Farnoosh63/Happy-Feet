@@ -62,6 +62,8 @@
         android:id="@+id/saleResult"
         android:layout_alignTop="@+id/saleSwitch"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="44dp"
+        android:textSize="40sp"
+        android:textAlignment="center" />
 
 </RelativeLayout>
