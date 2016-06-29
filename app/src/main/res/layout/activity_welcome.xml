@@ -9,4 +9,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.epicodus.happyfeet.WelcomeActivity">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/manImageButton"
+        android:src="@drawable/maleicon"
+        android:layout_marginRight="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/womanImageButton"
+        android:src="@drawable/womanicon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/womanListView"
+        android:layout_below="@+id/womanImageButton"
+        android:layout_alignRight="@+id/womanImageButton"
+        android:layout_alignEnd="@+id/womanImageButton" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/manListView"
+        android:layout_alignTop="@+id/womanListView"
+        android:layout_alignLeft="@+id/manImageButton"
+        android:layout_alignStart="@+id/manImageButton" />
+
 </RelativeLayout>
