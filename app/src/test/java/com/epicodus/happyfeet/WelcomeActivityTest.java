@@ -1,7 +1,8 @@
 package com.epicodus.happyfeet;
 
 import android.os.Build;
-import android.widget.ImageButton;
+
+//import android.widget.ListView;
 import android.widget.Switch;
 
 import org.junit.Before;
@@ -11,6 +12,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
+
 import static junit.framework.Assert.assertTrue;
 
 @Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
@@ -18,6 +20,7 @@ import static junit.framework.Assert.assertTrue;
 public class WelcomeActivityTest {
 
     private WelcomeActivity activity;
+//    private ListView mWomanListView;
 
     @Before
     public void setup() {
@@ -29,4 +32,6 @@ public class WelcomeActivityTest {
         Switch switchText = (Switch) activity.findViewById(R.id.saleSwitch);
         assertTrue("turn on sale".equals(switchText.getText().toString()));
     }
+
+
 }

@@ -44,6 +44,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         mSaleSwitch.setChecked(true);
         //attach a listener to check for changes in state
         mSaleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            private boolean isChecked = false;
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
