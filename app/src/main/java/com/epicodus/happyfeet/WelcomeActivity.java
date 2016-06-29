@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -18,6 +21,8 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     @Bind(R.id.womanListView) ListView mWomanListView;
 
     @Bind(R.id.manImageButton) ImageButton mManImageButton;
+    @Bind(R.id.saleResult) TextView mSaleResult;
+    @Bind(R.id.saleSwitch) Switch mSaleSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,26 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
 
         mWomanImageButton.setOnClickListener(this);
         mManImageButton.setOnClickListener(this);
+
+
+
+        //set the switch to ON
+        mSaleSwitch.setChecked(true);
+        //attach a listener to check for changes in state
+        mSaleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    mSaleResult.setText("Switch is currently ON");
+                } else {
+                    mSaleResult.setText("Switch is currently OFF");
+                }
+            }
+        });
+
+
     }
 
     @Override

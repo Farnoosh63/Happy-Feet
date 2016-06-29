@@ -56,4 +56,12 @@
         android:layout_centerHorizontal="true"
         android:checked="false" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saleResult"
+        android:layout_alignTop="@+id/saleSwitch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp" />
+
 </RelativeLayout>
